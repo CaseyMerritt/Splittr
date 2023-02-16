@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!-- Text for Title-->
+        <TextView
+            android:id="@+id/title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/title"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextContrastCheck" />
+
+<!--        // Text for number of people label-->
+        <TextView
+            android:id="@+id/number_of_people_label_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/number_of_people_label"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_textView" />
+
+<!--        // Text for number of people value-->
+
+
+        <!--        // Add Person Button Image-->
+        <TextView
+            android:id="@+id/number_of_people_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:text="@string/number_of_people"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toStartOf="@+id/people_add_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/number_of_people_label_textView" />
+
+        <ImageView
+            android:id="@+id/people_add_imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/number_of_people_label_textView"
+            app:layout_constraintTop_toBottomOf="@+id/number_of_people_label_textView"
+            app:srcCompat="@drawable/add_icon" />
+
+<!--        // Text for tip amount label-->
+        <TextView
+            android:id="@+id/tip_amount_label_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/tip_amount_label"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/tip_add_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/title_textView" />
+
+<!--        // Text for tip amount value-->
+        <TextView
+            android:id="@+id/tip_amount_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/tip_amount"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toStartOf="@+id/tip_add_imageView"
+            app:layout_constraintStart_toEndOf="@+id/tip_subtract_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/tip_amount_label_textView" />
+
+<!--        // Image for tip subtract button-->
+        <ImageView
+            android:id="@+id/tip_subtract_imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toStartOf="@+id/tip_amount_label_textView"
+            app:layout_constraintTop_toBottomOf="@+id/tip_amount_label_textView"
+            app:srcCompat="@drawable/minus_icon" />
+
+<!--        // Image for tip add button-->
+        <ImageView
+            android:id="@+id/tip_add_imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tip_amount_label_textView"
+            app:srcCompat="@drawable/add_icon" />
+
+<!--        // Text for label for tax-->
+        <TextView
+            android:id="@+id/tax_label_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/tax_label"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/number_of_people_textView" />
+
+<!--        // Text for tax value-->
+
+        <!--        // Text for subtotal label-->
+
+        <EditText
+            android:id="@+id/tax_result_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:hint="Enter Tax"
+            android:text="0"
+            android:inputType="numberDecimal"
+            android:onClick="onClick"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tax_label_textView" />
+
+        <ImageView
+            android:id="@+id/dollarsign_imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tax_result_textView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/dollarsign" />
+
+        <ImageView
+            android:id="@+id/dollarsign_imageView2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/subtotal_result_textView"
+            app:srcCompat="@drawable/dollarsign" />
+
+        <TextView
+            android:id="@+id/subtotal_label_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="64dp"
+            android:text="@string/subtotal_label"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tip_amount_textView" />
+
+<!--        // Text for subtotal result-->
+        <EditText
+            android:id="@+id/subtotal_result_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginEnd="16dp"
+            android:hint="Enter Subtotal"
+            android:text="0"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subtotal_label_textView"
+            android:inputType="numberDecimal"
+            android:onClick="onClick"
+            android:clickable="true"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    // Container for Person List Fragment-->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

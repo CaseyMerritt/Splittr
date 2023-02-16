@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SplitTheBill</string>
+    <string name="title">Split the Bill</string>
+    <string name="number_of_people_label">Number of people:</string>
+    <string name="number_of_people">0</string>
+    <string name="tip_amount_label">Tip Amount:</string>
+    <string name="tip_amount">0%</string>
+    <string name="tax_label">Tax:</string>
+    <string name="tax_result">$0.00</string>
+    <string name="subtotal_label">Subtotal:</string>
+    <string name="subtotal_result">$0.00</string>
+</resources>
